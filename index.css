@@ -185,7 +185,6 @@ body {
 
 /* Resume section */
 .main #resume {
-  background-image: url(/data/imgs/Background/resume.avif);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -500,7 +499,6 @@ body {
 
 /* Contact section */
 .main #contact {
-  background-image: url(/data/imgs/Background/backgroundContact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
