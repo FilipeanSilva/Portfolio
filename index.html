@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filipe Silva</title>
+    <link rel="icon" href="./data/imgs/brainLogo.png" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <!-- <button class="burger-menu">&#9776;</button> -->
+        <img src="./data/imgs/Logo/FS_Logo.png" id="logoSideBar" />
+        <div id="small-sidebar">
+          <img
+            src="./data/imgs/Sidebar/home.png"
+            alt=""
+            onclick="scrollToSection('#home')"
+          />
+          <img
+            src="./data/imgs/Sidebar/project.png"
+            alt=""
+            onclick="scrollToSection('#projects')"
+          />
+          <img
+            src="./data/imgs/Sidebar/resume.png"
+            alt=""
+            onclick="scrollToSection('#resume')"
+          />
+          <img
+            src="./data/imgs/Sidebar/contact.png"
+            alt=""
+            onclick="scrollToSection('#contact')"
+          />
+        </div>
+
+        <ul id="big-sidebar">
+          <li id="home-link">
+            <img src="./data/imgs/Sidebar/home.png" alt="" /><a>Home</a>
+          </li>
+          <li id="projects-link">
+            <img src="./data/imgs/Sidebar/project.png" alt="" /><a>Projects</a>
+          </li>
+          <li id="resume-link">
+            <img src="./data/imgs/Sidebar/resume.png" alt="" /><a>Resume</a>
+          </li>
+          <li id="contact-link">
+            <img src="./data/imgs/Sidebar/contact.png" alt="" /><a>Contact</a>
+          </li>
+        </ul>
+
+        <div class="footer">
+          <p>&copy; 2023 Website</p>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="title">
+          <h1>About me</h1>
+        </div>
+        <div id="home">
+          <img src="./data/imgs/Home/meSuit.png" id="meImg" />
+          <h3>Hello, it's me</h3>
+          <h1>Filipe Silva</h1>
+          <h4>Computer Engineer</h4>
+        </div>
+
+        <div class="title">
+          <h1>Projects</h1>
+        </div>
+
+        <div id="projects">
+          <img
+            id="projectWeather"
+            src="./data/imgs/Projects/weather.png"
+            alt="weather icon"
+            width="10%"
+            style="border: 2px solid #d9d9db; padding: 10px; transition: filter 0.3s;"
+            onmouseover="this.style.filter='brightness(70%)'"
+            onmouseout="this.style.filter='brightness(100%)'"
+          />
+          <img
+            id="projectRentACar"
+            src="./data/imgs/Projects/rental-car.png"
+            alt="weather icon"
+            width="10%"
+            style="border: 2px solid #d9d9db; padding: 10px; transition: filter 0.3s;"
+            onmouseover="this.style.filter='brightness(70%)'"
+            onmouseout="this.style.filter='brightness(100%)'"
+          />
+          <img
+            id="projectLibrary"
+            src="./data/imgs/Projects/book.png"
+            width="10%"
+            alt="weather icon"
+            style="border: 2px solid #d9d9db; padding: 10px; transition: filter 0.3s;"
+            onmouseover="this.style.filter='brightness(70%)'"
+            onmouseout="this.style.filter='brightness(100%)'"
+          />
+          <img
+            id="projectVotingDAPP"
+            src="./data/imgs/Projects/voting-box.png"
+            alt="weather icon"
+            width="10%"
+            style="border: 2px solid #d9d9db; padding: 10px; transition: filter 0.3s;"
+            onmouseover="this.style.filter='brightness(70%)'"
+            onmouseout="this.style.filter='brightness(100%)'"
+          />
+          <img
+            id="projectPizzaStore"
+            src="./data/imgs/Projects/pizza.png"
+            alt="weather icon"
+            width="10%"
+            style="border: 2px solid #d9d9db; padding: 10px; transition: filter 0.3s;"
+            onmouseover="this.style.filter='brightness(70%)'"
+            onmouseout="this.style.filter='brightness(100%)'"
+          />
+        </div>
+
+        <div class="title">
+          <h1>Resume</h1>
+        </div>
+        <div id="resume">
+          <div id="resumeImage">
+            <img src="./data/imgs/Resume/meResume.png" id="meImg" />
+          </div>
+          <div id="resumeContent">
+            <div id="companiesContent">
+              <h3 style="border-top: 1px solid black; border-bottom: 1px solid black;">Professional history</h3>
+              <div id="content">
+                <div id="meeitContent" class="company-card">
+                  <div id="meeitImage">
+                    <img src="./data/imgs/Resume/meeit.png" alt="" />
+                  </div>
+                  <div id="meeitText">
+                    <h5>
+                      During my degree program, I completed an internship with
+                      Mee-it, where I developed a web platform for
+                      commercializing sectional doors.
+                    </h5>
+                  </div>
+                </div>
+
+                <div id="adentisContent" class="company-card">
+                  <div id="adentisImage">
+                    <img src="./data/imgs/Resume/adentis.png" alt="" />
+                  </div>
+                  <div id="adentisText">
+                    <h5>
+                      I worked on a project focused on maintaining and
+                      developing online call center software.
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="languageAndEducationContent">
+              <div id="educationContent">
+                <div id="degree">
+                    <h3 style="border-top: 1px solid black; border-bottom: 1px solid black;">Degree</h3>
+                  <div id="degreeContent" class="company-card">
+                    <div id="degreeImage">
+                      <img src="./data/imgs/Resume/isec.png" alt="" />
+                    </div>
+                    <div>
+                      <h5>
+                        I have a bachelor's degree at Coimbra Institute of
+                        Engineering (ISEC), graduating in computer engineering.
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="languageAndCertifications">
+                <div id="certificationsContent">
+                  <h3 style="border-top: 1px solid black; border-bottom: 1px solid black;">Certifications</h3>
+                  <div id="certificationsBox">
+                    <div class="certifications">
+                      <img src="./data/imgs/Resume/nodeJS.png" alt="" />
+                      <h4>NodeJS</h4>
+                    </div>
+                    <div class="certifications">
+                      <img src="./data/imgs/Resume/vueJS.png" alt="" />
+                      <h4>VueJs</h4>
+                    </div>
+                    <div class="certifications">
+                      <img src="./data/imgs/Resume/react.png" alt="" />
+                      <h4>React native</h4>
+                    </div>
+                    <div class="certifications">
+                      <img src="./data/imgs/Resume/docker.png" alt="" />
+                      <h4>Docker</h4>
+                    </div>
+                  </div>
+                </div>
+                <div id="languageContent">
+                  <h3 style="border-top: 1px solid black; border-bottom: 1px solid black;">Languages</h3>
+                  <div id="languagesBox">
+                    <div class="lang" id="pt" onclick="togglePlay('pt')">
+                      <span>🇵🇹</span>
+                      <p>Portuguese</p>
+                      <div class="languagesStars" data-rating="5">
+                        <p>★★★★★</p>
+                        <div class="audio-wave">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lang" id="en" onclick="togglePlay('en')">
+                      <span>🇬🇧</span>
+                      <p>English</p>
+                      <div class="languagesStars" data-rating="5">
+                        <p>★★★★★</p>
+
+                        <div class="audio-wave">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lang" id="de" onclick="togglePlay('de')">
+                      <span>🇩🇪 </span>
+                      <p>German</p>
+                      <div class="languagesStars" data-rating="3">
+                        <p>★★★☆☆</p>
+
+                        <div class="audio-wave">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lang" id="fr" onclick="togglePlay('fr')">
+                      <span>🇫🇷</span>
+                      <p>French</p>
+                      <div class="languagesStars" data-rating="3">
+                        <p>★★★☆☆</p>
+                        <div class="audio-wave">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lang" id="es" onclick="togglePlay('es')">
+                      <span>🇪🇸</span>
+                      <p>Spanish</p>
+                      <div class="languagesStars" data-rating="3">
+                        <p>★★★☆☆</p>
+
+                        <div class="audio-wave">
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                          <div class="bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="title">
+          <h1>Contact</h1>
+        </div>
+
+        <div id="contact">
+          <section class="section">
+            <div class="content">
+              <div class="location">
+                <img
+                  id="location-id"
+                  src="./data/imgs/Contact/location.png"
+                  alt="location icon"
+                />
+                <div class="info">
+                  <p>Location</p>
+                  <a
+                    href="https://maps.app.goo.gl/Di9PkMmzbX27LDyt5"
+                    target="_blank"
+                    >Bern - Switzerland</a
+                  >
+                </div>
+              </div>
+
+              <div class="email">
+                <img
+                  id="mail-id"
+                  src="./data/imgs/Contact/mail.png"
+                  alt="mail icon"
+                />
+                <div class="info">
+                  <p>Email</p>
+                  <a href="mailto:filipeansilva06@gmail.com"
+                    >filipeansilva06@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="linkedin">
+                <img
+                  id="linkedin-id"
+                  src="./data/imgs/Contact/linkedin.png"
+                  alt="linkedin icon"
+                />
+                <div class="info">
+                  <p>Linkedin</p>
+                  <a
+                    href="https://www.linkedin.com/in/filipeansilva"
+                    target="_blank"
+                    >Filipeansilva</a
+                  >
+                </div>
+              </div>
+
+              <div class="github">
+                <img
+                  id="github-id"
+                  src="./data/imgs/Contact/github.png"
+                  alt="github icon"
+                />
+
+                <div class="info">
+                  <p>Github</p>
+                  <a href="https://github.com/FilipeanSilva" target="_blank"
+                    >FilipeanSilva</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

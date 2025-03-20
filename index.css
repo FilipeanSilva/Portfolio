@@ -1,0 +1,729 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #F2F2F4;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #F2F2F4;
+  border: 1px solid #D9D9DB;
+  overflow-y: auto;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  transform-origin: center center;
+}
+
+.sidebar img#logoSideBar {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.sidebar #big-sidebar {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  justify-content: center;
+}
+
+.sidebar #big-sidebar li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  width: 100%;
+  justify-content: center;
+}
+
+.sidebar #big-sidebar li:hover {
+  opacity: 0.7;
+  background-color: #D9D9DB;
+  cursor: pointer;
+}
+
+.sidebar #big-sidebar li img {
+  width: 30px;
+  margin-right: 1em;
+}
+
+.sidebar #big-sidebar li a {
+  display: block;
+  padding: 10px;
+}
+
+.sidebar #small-sidebar {
+  display: none;
+}
+
+.sidebar #small-sidebar img {
+  width: 20%;
+}
+
+.sidebar .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #747475;
+  color: #F2F2F4;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  flex: 1;
+  margin-left: 200px;
+  overflow-y: auto;
+}
+
+.main div {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main div:target {
+  display: flex;
+}
+
+.main .title {
+  background-color: #747475;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -1em;
+  margin-right: -1em;
+  height: 10vh;
+}
+
+.main .title h1 {
+  color: #F2F2F4;
+  margin: 0;
+}
+
+.main h1 {
+  color: #F2F2F4;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.main h3 {
+  color: #D9D9DB;
+  text-align: center;
+}
+
+.main h4 {
+  margin-top: 5px;
+  color: #B3B3B5;
+  text-align: center;
+}
+
+.main h5 {
+  margin-top: 5px;
+  color: #747475;
+  text-align: center;
+}
+
+/* Home section */
+.main #home {
+  background-image: url(/data/imgs/Background/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main #home h1 {
+  color: #B3B3B5;
+}
+
+.main #home h3 {
+  color: #D9D9DB;
+}
+
+.main #home h4 {
+  color: #747475;
+}
+
+.main #home .text {
+  padding: 1em;
+  width: 70%;
+}
+
+.main #home img#meImg {
+  display: block;
+  height: 50%;
+}
+
+.main #home p {
+  text-align: center;
+}
+
+/* Resume section */
+.main #resume {
+  background-image: url(/data/imgs/Background/resume.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+}
+
+.main #resume #resumeImage {
+  width: 30%;
+  margin: 1em;
+}
+
+.main #resume #resumeImage img {
+  height: 50%;
+}
+
+.main #resume #resumeContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  padding: 1em 0 1em 10%;
+}
+
+.main #resume #resumeContent h3 {
+  color: #747475;
+  margin-top: 0;
+}
+
+.main #resume #resumeContent h5 {
+  display: flex;
+  align-items: center;
+  color: rgb(143, 143, 143);
+  height: 50%;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.main #resume #resumeContent h4 {
+  color: rgb(143, 143, 143);
+}
+
+.main #resume #resumeContent #companiesContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 40%;
+}
+
+ .company-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 50px;
+  /* Large border-radius for oval shape */
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0.5em;
+}
+
+.main #resume #resumeContent #companiesContent img {
+  width: 100%;
+}
+
+.main #resume #resumeContent #companiesContent #content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Company sections */
+.main #resume #resumeContent #companiesContent #content #meeitContent,
+.main #resume #resumeContent #companiesContent #content #adentisContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.main #resume #resumeContent #companiesContent #content #meeitContent:hover,
+.main #resume #resumeContent #companiesContent #content #adentisContent:hover {
+  opacity: 0.7;
+}
+
+.main #resume #resumeContent #companiesContent #content #meeitContent #meeitImage {
+  width: 10em;
+  max-height: 30%;
+}
+
+.main #resume #resumeContent #companiesContent #content #adentisContent #adentisImage {
+  width: 7em;
+  max-height: 30%;
+}
+
+/* Language and Education section */
+.main #resume #resumeContent #languageAndEducationContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent img {
+  all: unset;
+  width: 100%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent {
+  display: flex;
+  align-items: flex-start;
+  width: 95%;
+  justify-content: flex-start;
+  height: 30%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent #degree {
+  display: flex;
+  align-items: center;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent #degree #degreeContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent #degree #degreeContent h5 {
+  margin-left: 5px;
+  height: auto;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent #degree #degreeContent:hover {
+  opacity: 0.7;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #educationContent #degree #degreeContent #degreeImage {
+  width: 10em;
+  max-height: 30%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  height: 70%;
+}
+
+/* Certifications section */
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1em;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .text {
+  height: 50%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .certifications {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .certifications img {
+  width: 20%;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .certifications h4 {
+  margin-left: 1em;
+}
+
+/* Language content section */
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1em;
+  justify-content: center;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox {
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 2px;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang p {
+  flex: 1;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+@keyframes grow-shrink {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+
+  50% {
+    height: 20px;
+  }
+
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars img {
+  width: 1.5em;
+  margin-left: 1em;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  width: 1.5em;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar {
+  width: 3px;
+  height: 0;
+  margin: 0 1px;
+  border-radius: 5px;
+  background-color: #2e4d67;
+  opacity: 0;
+  transform-origin: bottom center;
+  animation-play-state: paused;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar:nth-child(1) {
+  animation: grow-shrink 1s linear infinite;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar:nth-child(2) {
+  animation: grow-shrink 1s linear infinite 0.2s;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar:nth-child(3) {
+  animation: grow-shrink 1s linear infinite 0.4s;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar:nth-child(4) {
+  animation: grow-shrink 1s linear infinite 0.6s;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave .bar:nth-child(5) {
+  animation: grow-shrink 1s linear infinite 0.8s;
+}
+
+.main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave.playing .bar {
+  animation: grow-shrink 1s linear infinite;
+}
+
+/* Projects section */
+.main #projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Contact section */
+.main #contact {
+  background-image: url(/data/imgs/Background/backgroundContact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main #contact .section {
+  display: table;
+  margin: auto;
+  border-radius: 3%;
+}
+
+.main #contact .section div {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.main #contact .section img {
+  padding-right: 1em;
+  vertical-align: middle;
+  align-self: center;
+  width: 8%;
+  position: static;
+  bottom: 0;
+}
+
+.main #contact .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main #contact .content div {
+  display: flex;
+  flex-direction: row;
+}
+
+.main #contact .content div:hover img {
+  transition: transform 1s ease;
+  transform: scale(1.2);
+}
+
+/* Continuation */
+.main #contact .content div:hover a {
+  font-weight: bold;
+}
+
+.main #contact .content .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main #contact .content .info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.main #contact a {
+  color: rgb(70, 70, 70);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 900px) {
+  .main {
+    margin: 0;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .main #home h5 {
+    width: 70%;
+  }
+
+  .main #resume #resumeImage {
+    display: none;
+  }
+
+  .main #resume #resumeContent {
+    width: 100%;
+    padding: 1em 0 1em 10%;
+  }
+
+  .main #resume #resumeContent h5 {
+    margin-top: 0;
+  }
+
+  .main #resume #resumeContent #companiesContent {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main #resume #resumeContent #companiesContent #content {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main #resume #resumeContent #companiesContent #content img {
+    width: 70%;
+  }
+
+  .main #resume #resumeContent #companiesContent #content h5 {
+    display: none !important;
+  }
+
+  .main #resume #resumeContent #degree {
+    width: 100%;
+    align-items: center !important;
+    justify-content: center;
+  }
+
+  .main #resume #resumeContent #degree h5 {
+    display: none !important;
+  }
+
+  .main #resume #resumeContent #degree img {
+    width: 70%;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications {
+    margin-bottom: 1em;
+    justify-content: space-around;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent {
+    margin-left: 5px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang p {
+    display: none;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars {
+    margin-left: 2px;
+    width: 30%;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars:before {
+    content: attr(data-rating) "/5";
+    font-weight: bold;
+    margin-right: 0.5em;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #languageContent #languagesBox .lang .languagesStars .audio-wave {
+    margin-left: 2px;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .certifications {
+    justify-content: center;
+  }
+
+  .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications #certificationsContent #certificationsBox .certifications h4 {
+    display: none;
+  }
+
+  .main #contact .section .content {
+    font-size: 1.2em;
+  }
+
+  .main #contact .section img {
+    width: 3em;
+  }
+
+  /* Mobile sidebar styling */
+  .sidebar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 35px;
+    height: 30%;
+    opacity: 0.2;
+    border-radius: 3em;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar img {
+    display: none !important;
+  }
+
+  .sidebar ul {
+    display: none !important;
+  }
+
+  .sidebar:hover {
+    opacity: 1;
+  }
+
+  .sidebar .footer {
+    display: none !important;
+  }
+
+  .sidebar #small-sidebar {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar #small-sidebar img {
+    display: flex !important;
+    margin: 1em 0;
+    width: 30px;
+  }
+
+  .sidebar #small-sidebar img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .main #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .main #projects img{
+    height: 10%;
+    width: auto;
+  }
+}
