@@ -253,6 +253,15 @@ body {
   margin-top: 0.5em;
 }
 
+.languageAndCertifications-card {
+  padding: 20px;
+  border-radius: 50px;
+  /* Large border-radius for oval shape */
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
 .main #resume #resumeContent #companiesContent img {
   width: 100%;
 }
@@ -313,6 +322,7 @@ body {
 .main #resume #resumeContent #languageAndEducationContent #educationContent #degree {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .main #resume #resumeContent #languageAndEducationContent #educationContent #degree #degreeContent {
@@ -339,7 +349,7 @@ body {
 .main #resume #resumeContent #languageAndEducationContent #languageAndCertifications {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 95%;
   height: 70%;
 }
