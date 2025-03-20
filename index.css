@@ -152,7 +152,6 @@ body {
 
 /* Home section */
 .main #home {
-  background-image: url(/data/imgs/Background/home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
