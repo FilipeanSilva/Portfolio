@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addLinkBehavior('adentisContent', 'https://www.adentis.pt/');
   addLinkBehavior('degreeContent', 'https://www.isec.pt/EN/');
   addLinkBehavior('projectWeather', 'https://filipeansilva.github.io/Weather/');
+  addLinkBehavior('projectProjectTracker', 'https://filipeansilva.github.io/Project-Tracker/');
   addLinkBehavior(
     'projectPizzaStore',
     'https://filipeansilva.github.io/PizzaStore'
